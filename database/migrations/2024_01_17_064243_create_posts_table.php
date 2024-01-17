@@ -20,6 +20,7 @@ return new class extends Migration
             $table->longText('description');
             $table->boolean('is_published')->default(false);
             $table->integer('min_to_read')->nullable(false);
+            $table->softDeletes();
             $table->timestamps();
         });
     }
